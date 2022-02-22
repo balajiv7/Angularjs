@@ -1,0 +1,29 @@
+section p
+{
+    color: red;
+}
+
+section > p
+{
+    color: orange;
+}
+
+
+h1 + p
+{
+    color: yellow;
+    background-color: antiquewhite;
+}
+
+
+h1 ~ p
+{
+    background-color: rgb(49,5,46);
+}
+/*
+h1 > p
+{
+    background-color: antiquewhite;
+}
+*/
+
