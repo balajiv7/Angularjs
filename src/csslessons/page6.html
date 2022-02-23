@@ -7,10 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paragraphs</title>
     <style>
-        #first {
+
+      /*  p:nth-child(2n+1)
+        {
+            color: cyan;
+            font-size: larger;
+        }*/
+        p:nth-child(even)
+        {
+            color: orange;
+            font-size: larger;
+        }
+       /* p:nth-child(odd)
+        {
+            color: brown;
+            font-size: larger;
+        }*/
+        p:first-child
+        {
+            color: red;
+            font-size: larger;
+        }*/
+       p:first-child
+        {
             color: red;
             font-size: larger;
         }
+        p:last-child
+        {
+            color: blue;
+            font-size: larger;
+        }
+
+      /*  #first {
+            color: red;
+            font-size: larger;
+        }*/
+
     </style>
 </head>
 
@@ -40,10 +73,10 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi doloribus esse nemo ratione aperiam
         tenetur voluptatem quam libero fuga architecto, illo autem! Nisi voluptates id quod sint porro cupiditate!
     </p>
-    <p>
+   <!--- <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi doloribus esse nemo ratione aperiam
         tenetur voluptatem quam libero fuga architecto, illo autem! Nisi voluptates id quod sint porro cupiditate!
-    </p>
+    </p>-->
 
 </body>
 

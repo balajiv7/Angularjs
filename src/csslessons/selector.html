@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="selector_style.css" rel="stylesheet">
     <title>CSS Selectors</title>
+    <style>
+        input[name="goButton"]
+        {
+            background: red;
+        }
+    </style>
 </head>
 <body>
     <h1 style="background-color: orange;">Inline style</h1>
@@ -17,12 +23,17 @@
     <ul>
         <li>HTML</li>
         <li>CSS</li>
-        <span>
+        <ol>
             <li>RDBMS</li>
-        </span>
+            <li>oracle</li>
+            <li>SQL</li>
+        </ol>
         <li class="item">Javascript</li>
         <li id="list-item">Bootstrap</li>
     </ul>
+    <ol>
+        <li>Just a book outside the list</li>
+    </ol>
 
     <div class="container">
         <input placeholder="email address" type="email" name="email" value="youremail@domain.com"/>
@@ -31,6 +42,7 @@
             <button>Click here</button>
         </div>
     </div>
+    <input type="submit" value="Go" name="goButton">
 
 
 </body>

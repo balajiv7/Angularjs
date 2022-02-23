@@ -6,6 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor</title>
+    <style>
+        a{
+            color: red;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+        }
+      /*  #Chennai
+        {
+            color: #ff0000;
+        }
+        #Madurai
+        {
+            color: green;
+        }*/
+       /* a[href="https://chennai.nic.in"]
+        {
+            color: #ff006a;
+        }
+        a[href="https://madurai.nic.in"]
+        {
+            color: green;
+        }*/
+        a[href*="chennai.nic"]
+        {
+            color: #ff0000;
+        }
+        a[href*="madurai.nic"]
+        {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -299,6 +333,12 @@
     <div>
         <a rel="noopener noreferrer" href="../images/Ajith.jpg"
         download="ajith">Ajith</a>
+
+       <p> <a href="https://madurai.nic.in" id="Madurai">Madurai</a></p>
+      
+       <p> <a href="https://chennai.nic.in" id="chennai">chennai</a></p>
+       <p> <a href="https://madurai.nic.in/" id="Madurai">Madurai</a></p>
+        
     </div>
 
 </body>
