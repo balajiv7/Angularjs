@@ -1,0 +1,59 @@
+/*.top{
+    box-sizing: border-box;
+}*/
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+a:visited{
+    color: purple;
+}
+a:hover{
+    color:  yellow;
+}
+a:active{
+    color: red;
+}
+
+.b1{
+    background-color: lightcyan;
+    width: 800px;
+    border: 15px solid lightpink;
+    padding: 1px;
+    margin: 1px;
+    line-height: 2;
+    
+}
+.c {
+    border: 15px solid lightpink;
+    padding: 1px;
+    margin: 20px;
+    color: violet;
+    background-color: teal;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    
+}
+#page{
+    border: 15px solid lightpink;
+    padding: 5px;
+    margin: 20px;
+}
+
+a{
+    font-size: 30px;
+    
+    padding: 3.5px;
+
+}
+ul li {
+    font-size: 30px;
+    color: darkolivegreen;
+}
+h1{
+    color: darkorange;
+    text-align: center;
+    
+}
