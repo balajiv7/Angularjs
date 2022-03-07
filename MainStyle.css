@@ -1,6 +1,7 @@
 /*.top{
     box-sizing: border-box;
 }*/
+
 body{
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -45,7 +46,7 @@ a:active{
 a{
     font-size: 30px;
     
-    padding: 3.5px;
+    padding: 3.5px;   
 
 }
 ul li {
