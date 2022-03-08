@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <div class="side-menu">
+    <div class="content">
+      <img class="close" src="images/icon-close.svg" alt="close">
+      <div class="side-nav">
+        <ul>
+          <li>Collections</li>
+          <li>  Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <header class="main__head">
+    <div class="logo">
+      <img class="toggle" src="images/icon-menu.svg" alt="menu">
+      <img aria-hidden="false" src="images/logo.svg" alt="logo">
+    </div>
+      <nav>
+        <ul>
+          <li> Collections</li>
+          <li>  Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div data-num = 0 class="card">
+        <img src="images/icon-cart.svg" alt="cart" class="icon-cart">
+        <img src="images/image-avatar.png" alt="user">
+      </div>
+      <div class="card-content">
+        <div class="head-cart">
+        <h1>
+          Cart
+        </h1>
+        <div class="line">
+    
+        </div>
+      </div>
+        <div class="main-content clear">
+          <div class="prod"></div>
+          <!-- <div class="prod">
+          <img src="images/image-product-1-thumbnail.jpg" alt="selected prodact">
+          <div class="text">
+          <p>
+            Fall Limited Edition Sneakers
+          </p>
+          <div class="quantity">
+            <span class="pre">$125.00 x 3</span>
+            <span class="final">$375.00</span>
+          </div>
+        </div>
+          <img class="delete" src="images/icon-delete.svg" alt="delete">
+        </div> -->
+      </div>
+        <div class="button cheac hide-button">
+          Checkout
+        </div>
+      </div>
+  </header>
+
+  <!-- End Header -->
+
+
+  <main class="main__content">
+    
+ 
+    <div class="display__prodact move-display">
+     
+      <div class="current-prodact move-current"> 
+      
+        <div class="parent move-parent">
+        
+        <img  class="one" src="images/image-product-1.jpg" alt="current prodact"> 
+        <img  class="two" src="images/image-product-2.jpg" alt="current prodact">
+        <img  class="three" src="images/image-product-3.jpg" alt="current prodact">
+        <img  class="four" src="images/image-product-4.jpg" alt="current prodact">
+
+      </div> 
+  
+
+      </div>
+      
+      <div class="prodact-images">
+        <div data-temp="0" class="img1">
+        <img src="images/image-product-1-thumbnail.jpg" alt="prodact1">
+        <div class="overlay"></div>
+      </div>
+      <div class="img2">
+        <img data-temp="1" src="images/image-product-2-thumbnail.jpg" alt="prodact2">
+        <div class="overlay"></div>
+      </div>
+
+
+      <div class="img3">
+        <img data-temp="2" src="images/image-product-3-thumbnail.jpg" alt="prodact3">
+        <div class="overlay"></div>
+      </div>
+      
+
+      <div class="img4">
+        <img data-temp="3" src="images/image-product-4-thumbnail.jpg" alt="prodact4">
+        <div class="overlay"></div>
+      </div>
+      </div>
+    </div>
+   <div class="mobil-img">
+     <img src="images/icon-previous.svg" alt="pre" class="pre">
+     <img src="images/image-product-1.jpg" alt="prodact" class="im">
+     <img src="images/icon-next.svg" alt="next" class="next">
+   </div>
+    <div class="right">
+      <div class="text">
+        <p>
+          Sneaker Company
+        </p>
+        <h1>
+          Fall Limited Edition Sneakers
+        </h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+      </div>
+      <div class="prise">
+        <div class="spans">
+        <sapn class="current-prise">
+          $125.00
+        </sapn>
+        <span class="dis">
+          50%
+        </span>
+      </div>
+        <p class="pre-prise">
+          <del>
+            $250.00
+          </del>
+        </p>
+      </div>
+      <div class="pay">
+        <div class="select">
+         
+          <img class="min" src="images/icon-minus.svg" alt="minus">
+  
+          <span class="count">3</span>
+            <img class="plus" src="images/icon-plus.svg" alt="plus">
+    
+        </div>
+        <div class="button add-to-cart">
+         
+            <img src="images/icon-cart.svg" alt="cart" class="add">
+         
+            <p>
+              Add To Cart
+            </p>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <div class="display-image">
+
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">BALAJI</a>.
+  </div>
+ 
+  <script src="main.js"></script>
+</body>
+</html>

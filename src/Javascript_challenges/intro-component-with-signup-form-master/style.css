@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../images/bg-intro-desktop.png");
+    background-color: var(--red);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2.2rem;
+}
+
+.box {
+    max-width: 1100px;
+    width: 100%;
+    height: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-wrapper {
+    width: 42%;
+    height: auto;
+    color: #fff;
+}
+
+.text-wrapper h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.text-wrapper p {
+    font-size: .95rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.form-box {
+    width: 55%;
+    max-width: 550px;
+}
+
+.form-box .trial-box {
+    width: 100%;
+    height: auto;
+    background-color:  var(--blue);
+    color: var(--grayish-blue);
+    text-align: center;
+    margin-bottom: 1.2rem;
+    padding: 0.75rem;
+    border-radius: .6rem;
+    font-size: .95rem;
+    box-shadow: 0 7px 5px 0 rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+.form-box .trial-box strong {
+    color: #fff !important;
+}
+
+.form-box .form-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: .6rem;
+    box-shadow: 0 7px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.input-wrapper {
+    height: 45px;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.input-field {
+    height: 100%;
+    width: 100%;
+    background: none;
+    font-size: .95rem;
+    border-radius: .5rem;
+    outline: none;
+    border: 2px solid var(--grayish-blue);
+    position: relative;
+    padding: 0.4rem 1.3rem;
+    transition: 0.4s;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 1.3rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .3s;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.input-field.active {
+    border-color: var(--blue);
+}
+
+.input-field.active + label {
+    opacity: 0;
+}
+
+.input-wrapper .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.input-wrapper p {
+    color: var(--red);
+    font-size: .75rem;
+    position: absolute;
+    right: 0;
+    font-weight: 500;
+    transition: .4s;
+    opacity: 0;
+}
+.sign-up-btn {
+    cursor: pointer;
+    background-color: var(--green);
+    width: 100%;
+    height: 45px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    border-radius: .4rem;
+    font-size: .95rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sign-up-btn:hover {
+    opacity: 0.7;
+}
+
+.form-wrapper p:last-child {
+    font-size: .75rem;
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
+.form-wrapper p:last-child span {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.input-field.failed {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.input-field.failed + label {
+    opacity: 0;
+}
+
+.input-field.failed ~ .error-icon{
+    opacity: 1;
+}
+
+.input-field.failed ~ p {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    transition: 0.4s
+}
+
+footer a:hover{
+    color: var(--blue);
+}
+
+
+@media screen and (max-width: 870px){
+    .box {
+        height: auto;
+        max-width: 550px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.6rem;
+    }
+
+    .box .text-wrapper {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .box .form-box{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 530px){
+    main {
+        padding: 3.6rem 1.8rem;
+        background-image: url(../images/bg-intro-mobile.png);
+    }
+    .box {
+        gap: 3.8rem;
+    }
+
+    .form-box .trial-box {
+        padding: 1rem 1.5rem;
+    }
+    .text-wrapper h1 {
+        font-size: 1.8rem;
+    }
+}
