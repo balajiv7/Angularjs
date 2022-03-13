@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<!-- tailwindcss -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="Styles/style.css" />
+		<title>Bookmark landing page</title>
+	</head>
+	<body>
+		<header>
+			<!-- top head -->
+			<div
+				class="flex items-center justify-between px-5 py-7 lg:px-40 lg:py-10"
+			>
+				<img src="./images/logo-bookmark.svg" alt="logo" />
+				<button v-cloak @click="open = !open" class="lg:hidden">
+					<img v-if="!open" src="./images/icon-hamburger.svg" alt="hamburger" />
+					<img v-else src="./images/icon-close.svg" alt="close" />
+				</button>
+				<!-- desktop nav -->
+				<div
+					class="items-center hidden space-x-8 text-xs tracking-widest uppercase lg:flex"
+				>
+					<h1
+						v-for="tab in tabs"
+						class="text-gray-600 cursor-pointer hover:text-rose-500"
+					>
+						{{ tab }}
+					</h1>
+					<button
+						class="
+							submit
+							py-2.5
+							text-white
+							px-6
+							rounded-md
+							tracking-widest
+							uppercase
+							hover:border-2
+							hover:border-rose-500
+							hover:text-rose-500
+							hover:bg-transparent
+						"
+					>
+						login
+					</button>
+				</div>
+			</div>
+			<!-- content -->
+			<div class="relative mt-14 lg:grid lg:grid-cols-2 lg:mt-5">
+				<!-- hero img -->
+				<div class="lg:order-1">
+					<img
+						src="./images/illustration-hero.svg"
+						alt="illustration-hero"
+						class="px-2 lg:p-8"
+					/>
+					<div class="absolute right-0 div"></div>
+				</div>
+				<!-- hero text -->
+				<div class="px-5 mt-16 text-center lg:text-left lg:pl-40 lg:mt-32">
+					<h1 class="text-2xl font-semibold tracking-wide lg:hidden">
+						A Simple Bookmark Manager
+					</h1>
+					<h1
+						class="hidden font-semibold leading-10 tracking-wide lg:block"
+						style="font-size: 2.5rem"
+					>
+						A Simple Bookmark Manager
+					</h1>
+					<p class="pt-3 text-sm sub-text lg:text-lg lg:pt-5">
+						A clean and simple interface to organize your favourite websites.
+						Open a new browser tab and see your sites load instantly. Try it for
+						free.
+					</p>
+					<div class="mt-5 space-x-2">
+						<button
+							class="px-5 py-3 text-sm tracking-tight text-white rounded-md shadow-xl bg-soft-blue"
+						>
+							Get it on Chrome
+						</button>
+						<button
+							class="px-5 py-3 text-sm tracking-tight bg-gray-100 rounded-md shadow-xl "
+						>
+							Get it on Firefox
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- mobile nav -->
+			<nav
+				v-if="open"
+				class="absolute top-0 w-full h-screen px-5 bg-nav lg:hidden"
+			>
+				<!-- top head -->
+				<div class="flex items-center justify-between py-5 mb-5">
+					<svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+						<g fill="none" fill-rule="evenodd">
+							<path
+								d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+								fill="#fff"
+								fill-rule="nonzero"
+							/>
+							<g>
+								<circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+								<path
+									d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+									fill="#FFF"
+								/>
+							</g>
+						</g>
+					</svg>
+					<button v-cloak @click="open = !open" class="pt-3">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15">
+							<path
+								fill="#fff"
+								fill-rule="evenodd"
+								d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"
+							/>
+						</svg>
+						<img v-else src="./images/icon-hamburger.svg" alt="hamburger" />
+					</button>
+				</div>
+				<div class="divide-y divide-gray-400/25">
+					<div></div>
+					<h1
+						v-cloak
+						v-for="tab in tabs"
+						:key="tab"
+						class="py-4 text-xl font-thin font-normal tracking-widest text-center text-gray-200 uppercase cursor-pointer "
+					>
+						{{ tab }}
+					</h1>
+					<div></div>
+				</div>
+				<div>
+					<button
+						class="w-full py-2 mt-4 text-xl tracking-widest text-gray-200 uppercase border-2 rounded-md "
+					>
+						Login
+					</button>
+				</div>
+				<div class="absolute flex space-x-10 bottom-10 right-32">
+					<img
+						v-cloak
+						v-for="social in socials"
+						:src="social"
+						alt="social"
+						class="w-1/4 cursor-pointer"
+					/>
+				</div>
+			</nav>
+		</header>
+
+		<main class="mt-32 mb-24 px-7">
+			<section class="lg:mb-40">
+				<div class="pb-8 text-center lg:w-1/2 lg:m-auto">
+					<h1 class="text-xl font-semibold tracking-wide lg:text-2xl">
+						Features
+					</h1>
+					<p class="pt-3 text-sm sub-text lg:px-20">
+						Our aim is to make it quick and easy for you to access your
+						favourite websites. Your bookmarks sync between your devices so you
+						can access them on the go.
+					</p>
+				</div>
+				<!-- features btn -->
+				<div
+					class="flex flex-col divide-y lg:divide-y-0 lg:flex-row lg:w-2/3 lg:m-auto"
+					id="features"
+				>
+					<div></div>
+					<button
+						@click="SIMPLE"
+						class="features-btn active hover:text-rose-500 focus:outline-none"
+					>
+						Simple Bookmarking
+					</button>
+					<button
+						@click="SPEEDY"
+						class="features-btn hover:text-rose-500 focus:outline-none"
+					>
+						Speedy Search
+					</button>
+					<button
+						@click="EASY"
+						class="features-btn hover:text-rose-500 focus:outline-none"
+					>
+						Easy Sharing
+					</button>
+					<div></div>
+				</div>
+				<!-- features content -->
+				<div class="mt-16 mb-20">
+					<div v-if="simple.close" class="relative lg:grid lg:grid-cols-2">
+						<div>
+							<img
+								:src="simple.src"
+								alt="illustration"
+								class="mb-14 lg:px-20 lg:ml-8"
+							/>
+							<div class="absolute first-div-2"></div>
+						</div>
+						<div
+							class="pb-8 text-center lg:text-left lg:w-1/2 lg:mt-14 lg:ml-16"
+						>
+							<h1 class="text-xl font-semibold tracking-wide lg:text-2xl">
+								{{ simple.title }}
+							</h1>
+							<p class="pt-3 text-sm sub-text lg:pb-5">
+								{{ simple.description }}
+							</p>
+							<button
+								class="
+									bg-soft-blue
+									py-2.5
+									text-white
+									px-4
+									rounded-md
+									tracking-widest
+									uppercase
+									text-xs
+									hidden
+									lg:block
+								"
+							>
+								More Info
+							</button>
+						</div>
+					</div>
+					<div v-if="speedy.close" class="relative lg:grid lg:grid-cols-2">
+						<div>
+							<img
+								:src="speedy.src"
+								alt="illustration"
+								class="mb-14 lg:px-24 lg:ml-20"
+							/>
+							<div class="absolute div-2"></div>
+						</div>
+						<div
+							class="pb-8 text-center lg:text-left lg:w-1/2 lg:mt-14 lg:ml-16"
+						>
+							<h1 class="text-xl font-semibold tracking-wide lg:text-2xl">
+								{{ speedy.title }}
+							</h1>
+							<p class="pt-3 text-sm sub-text lg:pb-5">
+								{{ speedy.description }}
+							</p>
+							<button
+								class="
+									bg-soft-blue
+									py-2.5
+									text-white
+									px-4
+									rounded-md
+									tracking-widest
+									uppercase
+									text-xs
+									hidden
+									lg:block
+								"
+							>
+								More Info
+							</button>
+						</div>
+					</div>
+					<div v-if="easy.close" class="relative lg:grid lg:grid-cols-2">
+						<div>
+							<img
+								:src="easy.src"
+								alt="illustration"
+								class="mb-14 lg:px-20 lg:ml-20"
+							/>
+							<div class="absolute div-2"></div>
+						</div>
+						<div
+							class="pb-8 text-center lg:text-left lg:w-1/2 lg:mt-14 lg:ml-16"
+						>
+							<h1 class="text-xl font-semibold tracking-wide lg:text-2xl">
+								{{ easy.title }}
+							</h1>
+							<p class="pt-3 text-sm sub-text lg:pb-5">
+								{{ easy.description }}
+							</p>
+							<button
+								class="
+									bg-soft-blue
+									py-2.5
+									text-white
+									px-4
+									rounded-md
+									tracking-widest
+									uppercase
+									text-xs
+									hidden
+									lg:block
+								"
+							>
+								More Info
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="pb-8 text-center lg:w-1/2 lg:m-auto">
+					<h1 class="text-xl font-semibold tracking-wide lg:text-2xl">
+						Download the extension
+					</h1>
+					<p class="pt-3 text-sm sub-text lg:px-20">
+						We’ve got more browsers in the pipeline. Please do let us know if
+						you’ve got a favourite you’d like us to prioritize.
+					</p>
+				</div>
+				<div
+					class="px-3 mb-20 space-y-8 lg:flex lg:space-y-0 lg:justify-center mid lg:space-x-7 lg:items-center"
+				>
+					<div v-cloak v-for="browser in browsers" :key="browser" class="bro">
+						<div class="pt-12 pb-5 text-center bg-white rounded-md shadow-xl">
+							<img :src="browser.src" :alt="browser.alt" class="w-20 m-auto" />
+							<div class="py-5">
+								<h1 class="text-lg font-semibold tracking-wider">
+									{{ browser.title }}
+								</h1>
+								<p class="pt-1 text-sm sub-text">{{ browser.sub }}</p>
+							</div>
+							<div class="border-2 border-dotted"></div>
+							<div class="w-full mt-4">
+								<button
+									class="px-10 py-3 text-sm tracking-tight text-white rounded-md bg-soft-blue lg:mx-5 lg:text-xs"
+								>
+									Add & Install Extension
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="lg:mt-32">
+				<div class="mt-32 text-center lg:w-1/2 lg:m-auto">
+					<h1 class="px-10 text-xl font-semibold tracking-wide lg:text-2xl">
+						Frequently Asked Questions
+					</h1>
+					<p class="pt-3 text-sm sub-text lg:px-20">
+						Here are some of our FAQs. If you have any other questions you’d
+						like answered please feel free to email us.
+					</p>
+				</div>
+				<div class="mt-10 lg:w-1/2 lg:m-auto lg:px-20 lg:pt-5">
+					<!-- Question 1 -->
+					<div class="py-3 border-b border-gray-400">
+						<div class="flex items-center justify-between">
+							<h1 class="text-sm">{{ QandA.q1.question }}</h1>
+							<button
+								@click="QandA.q1.arrow = !QandA.q1.arrow"
+								class="transition-all duration-200 ease-in-out transform"
+								:class="QandA.q1.arrow ? 'focus:rotate-180' : 'focus:rotate-0'"
+							>
+								<img src="./images/icon-arrow.svg" alt="arrow" />
+							</button>
+						</div>
+						<p
+							v-if="QandA.q1.arrow"
+							class="flex-none text-sm leading-6 pt-7 sub-text"
+						>
+							{{ QandA.q1.answer }}
+						</p>
+					</div>
+					<!-- Question 2 -->
+					<div class="py-3 border-b border-gray-400">
+						<div class="flex items-center justify-between">
+							<h1 class="text-sm">{{ QandA.q2.question }}</h1>
+							<button
+								@click="QandA.q2.arrow = !QandA.q2.arrow"
+								class="transition-all duration-200 ease-in-out transform"
+								:class="QandA.q2.arrow ? 'focus:rotate-180' : 'focus:rotate-0'"
+							>
+								<img src="./images/icon-arrow.svg" alt="arrow" />
+							</button>
+						</div>
+						<p
+							v-if="QandA.q2.arrow"
+							class="flex-none text-sm leading-6 pt-7 sub-text"
+						>
+							{{ QandA.q2.answer }}
+						</p>
+					</div>
+					<!-- Question 3 -->
+					<div class="py-3 border-b border-gray-400">
+						<div class="flex items-center justify-between">
+							<h1 class="text-sm">{{ QandA.q3.question }}</h1>
+							<button
+								@click="QandA.q3.arrow = !QandA.q3.arrow"
+								class="transition-all duration-200 ease-in-out transform"
+								:class="QandA.q3.arrow ? 'focus:rotate-180' : 'focus:rotate-0'"
+							>
+								<img src="./images/icon-arrow.svg" alt="arrow" />
+							</button>
+						</div>
+						<p
+							v-if="QandA.q3.arrow"
+							class="flex-none text-sm leading-6 pt-7 sub-text"
+						>
+							{{ QandA.q3.answer }}
+						</p>
+					</div>
+					<!-- Question 4 -->
+					<div class="py-3 border-b border-gray-400">
+						<div class="flex items-center justify-between">
+							<h1 class="text-sm">{{ QandA.q4.question }}</h1>
+							<button
+								@click="QandA.q4.arrow = !QandA.q4.arrow"
+								class="transition-all duration-200 ease-in-out transform"
+								:class="QandA.q4.arrow ? 'focus:rotate-180' : 'focus:rotate-0'"
+							>
+								<img src="./images/icon-arrow.svg" alt="arrow" />
+							</button>
+						</div>
+						<p
+							v-if="QandA.q4.arrow"
+							class="flex-none text-sm leading-6 pt-7 sub-text"
+						>
+							{{ QandA.q4.answer }}
+						</p>
+					</div>
+				</div>
+				<div class="flex justify-center mt-10">
+					<button
+						class="px-5 py-3 text-sm tracking-tight text-white rounded-md shadow-xl bg-soft-blue"
+					>
+						More Info
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<section class="px-8 pt-16 pb-10 top-footer">
+				<div class="text-center text-white">
+					<h5
+						class="pb-2 text-xs font-thin lg:pb-7"
+						style="letter-spacing: 5px"
+					>
+						35,000+ already joined
+					</h5>
+					<h2
+						class="text-xl tracking-wider lg:text-2xl lg:w-1/2 lg:m-auto lg:px-36"
+					>
+						Stay up-to-date with what we’re doing
+					</h2>
+				</div>
+				<form
+					@submit.prevent="validation"
+					class="relative flex flex-col justify-center mt-5 lg:flex-row lg:items-center"
+				>
+					<input
+						type="email"
+						v-model="form.email"
+						class="
+							mx-0.5
+							py-2.5
+							pl-5
+							text-sm
+							z-10
+							rounded-md
+							placeholder:text-xs
+							focus:outline-none
+							disabled:bg-gray-50 disabled:text-gray-500
+							invalid:text-pink-600
+							lg:pr-10 lg:mr-5
+						"
+						placeholder="Enter your email address..."
+					/>
+					<p
+						v-cloak
+						v-if="form.emailError"
+						class="
+							w-full
+							lg:w-60
+							err
+							absolute
+							pt-10
+							pb-0.5
+							pl-5
+							text-xs text-white
+							rounded-md
+							submit
+						"
+						style="top: -2px"
+					>
+						{{ form.emailError }}
+					</p>
+					<button
+						class="
+							py-2.5
+							rounded-md
+							text-sm text-white
+							mt-5
+							submit
+							lg:mt-0 lg:px-5
+						"
+					>
+						Contact Us
+					</button>
+				</form>
+			</section>
+			<section
+				class="py-10 space-y-5 bottom-footer lg:flex lg:items-baseline lg:justify-between lg:px-40 lg:pt-3 lg:pb-6"
+			>
+				<div class="lg:flex lg:items-center">
+					<svg
+						class="m-auto mb-7 lg:mb-0 lg:mr-10"
+						width="148"
+						height="25"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g fill="none" fill-rule="evenodd">
+							<path
+								d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+								fill="#fff"
+								fill-rule="nonzero"
+							/>
+							<g>
+								<circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+								<path
+									d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+									fill="#FFF"
+								/>
+							</g>
+						</g>
+					</svg>
+					<h1
+						v-cloak
+						v-for="tab in tabs"
+						:key="tab"
+						class="text-xs font-thin font-normal tracking-widest text-center text-gray-200 uppercase cursor-pointer lg:px-5"
+					>
+						{{ tab }}
+					</h1>
+				</div>
+				<div class="flex justify-center pt-5 space-x-5 lg:pt-0">
+					<img
+						v-cloak
+						v-for="social in socials"
+						:src="social"
+						alt="social"
+						class="w-5 cursor-pointer"
+					/>
+				</div>
+			</section>
+		</footer>
+
+		<!-- petiteVue -->
+		<script src="https://unpkg.com/petite-vue" defer></script>
+		<script src="Js/main.js" defer></script>
+	</body>
+</html>

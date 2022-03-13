@@ -1,0 +1,164 @@
+body {
+    font-family: 'Spartan', sans-serif;
+    position: relative;
+  }
+  h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: hsl(300, 43%, 22%);
+  }
+  
+  h4{
+    font-size: 12px;
+    margin: 5px;
+  }
+  h5{
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+  }
+  p{
+    font-size: 12px;
+    color: hsl(300, 24%, 96%);
+    font-weight: 400;
+    padding: 30px;
+  }
+  .feedback {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    padding: 40px;
+  }
+  
+  .bottom-background-img {
+    position: relative;
+    bottom: 250px;
+  }
+  
+  .heading {
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+  }
+  
+  .heading-text {
+    width: 60%;
+  
+    margin-bottom: 15px;
+  }
+  
+  .description-text {
+    width: 75%;
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+  }
+  
+  .star-rating {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    left: 45%;
+    right: 30%;
+    top: 30px;
+  }
+  .icon{
+    color: orange;
+  }
+  .reviews {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .rating-one {
+    background-color: hsl(300, 24%, 96%);
+    width: 62%;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    margin-right: 50px;
+  }
+  
+  .rating-two {
+    background-color: hsl(300, 24%, 96%);
+    margin-bottom: 15px;
+    width: 62%;
+    padding-left: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  
+  .rating-three {
+    background-color: hsl(300, 24%, 96%);
+    margin-bottom: 15px;
+    width: 62%;
+    padding-left: 20px;
+    margin-left: 80px;
+    margin-right: 8px;
+  }
+  
+  .container-fluid {
+    padding: 0 15%;
+  }
+  
+  .card-design {
+    position: relative;
+    top: 150px;
+  }
+  
+  .card-layout {
+    background-color: hsl(300, 43%, 22%);
+    width: 28%;
+    display: inline-block;
+    border-radius: 5%;
+    margin-right: 25px;
+  }
+  
+  .card-image {
+    display: inline-block;
+    border-radius: 50%;
+    width: 15%;
+    position: relative;
+    top: 25px;
+    left: 25px;
+  }
+  
+  .card-text {
+    display: inline-block;
+    width: 60%;
+    position: relative;
+    left: 35px;
+    top: 15px;
+  
+  }
+  
+  .card-two {
+    position: relative;
+    top: 20px;
+  }
+  
+  .card-three {
+    position: relative;
+    top: 40px;
+  }
+  .name{
+    color: hsl(300, 24%, 96%);
+    font-weight: 500;
+  }
+  .buyer-type{
+    color: hsl(333, 80%, 67%);
+    font-weight: 400;
+  }
+  
+  .attribution {
+    font-size: 11px;
+    position: absolute;
+    bottom: 100px;
+    left: 450px;
+    text-align: center;
+  
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }

@@ -1,0 +1,109 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    background-image: linear-
+    gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.navbar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 35px 0;
+    width: 85%;
+}
+.logo {
+    cursor: pointer;
+    width: 220px;
+}
+.navbar ul li{
+    display: inline-block;
+    font-size: 23px;
+    list-style: none;
+    margin: 15px 15px 15px ;
+    position: relative;
+}
+.navbar ul li a{
+    background-color: lightcoral;
+    color:cyan;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    background: #009688;
+    bottom: -10px;
+    content: '';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+    width: 0;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content { 
+    color: skyblue;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;    
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    text-transform: uppercase;
+}
+.content b{
+    background-color: #fff;
+}
+.content p{
+    font-weight: 330;
+    font-size: xx-large;
+    line-height: 25px;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+button {
+    border-radius: 25px;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 10px;
+    overflow: hidden;
+    padding: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+span{
+    
+    background: #009688;
+    border-radius: 25px;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+    width: 0;
+    z-index: -1;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+

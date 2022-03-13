@@ -1,0 +1,36 @@
+.content {
+    padding-left: 560px;
+    padding-top: 30px;
+    color: brown;
+    font-size: xx-large;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    width: 850px;
+    text-transform: uppercase;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.logo {
+    width: 187px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 45px 45px 45px;
+    position: relative;
+    font-size: 26px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: cyan;
+    text-transform: uppercase;
+    background-color: lightcoral;
+}
