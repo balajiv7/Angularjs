@@ -28,8 +28,8 @@ html:focus-within {
 }
 
 body {
-  min-height: 100vh;
   line-height: 1.5;
+  min-height: 100vh;
   text-rendering: optimizeSpeed;
 }
 
@@ -39,8 +39,8 @@ a:not([class]) {
 
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 input,

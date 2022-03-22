@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script type="text/javascript"
+    src="Scripts/functions.js">
+</script>
+</head>
+<body>
+<!-- 
+These are "HOISTED" ,meaning js 'hoists' or puts them at the top of the file
+so if we try run a fiunction
+that is defined with the "function" keyword nefore it is defined (above its definition),
+then there is no error and the function is executed successfully.
+ -->
+
+<script>
+    const doc = doctorize('Balaji');
+    console.log(doc);
+    function doctorize (firstName) {
+    return  `Dr. ${firstName}`;
+}
+</script>
+    
+</body>
+</html>

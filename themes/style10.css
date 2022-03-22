@@ -3,7 +3,12 @@
     padding: 0;
     margin: 0;
 }
-
+body {
+    background-image: url(../images/pack.jpeg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
 .banner {
     background-image: linear-
     gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
@@ -58,7 +63,7 @@
     text-align: center;
     width: 100%;    
 }
-.content h1{
+.heading {
     font-size: 70px;
     margin-top: 80px;
     text-transform: uppercase;
@@ -105,5 +110,4 @@ button:hover span{
 button:hover{
     border: none;
 }
-
 

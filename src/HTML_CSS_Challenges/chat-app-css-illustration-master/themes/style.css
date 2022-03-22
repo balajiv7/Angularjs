@@ -2,63 +2,67 @@
 *::before,
 *::after {
   margin: 0;
-  padding: 0; }
-
+  padding: 0; 
+}
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+ }
   @media screen and (max-width: 75em) {
     html {
-      font-size: 50%; } }
-
+      font-size: 50%;
+     }
+     }
 .container {
   background-color: #000;
-  padding: 7rem 0;
   display: grid;
+  grid-row-gap: 3rem; 
+  padding: 7rem 0;
   place-items: center;
-  grid-row-gap: 3rem; }
+}
   @media screen and (max-width: 75em) {
     .container {
-      padding: 0; } }
-
+      padding: 0; 
+    }
+   }
 .container {
-  line-height: 1.6;
+  font-family: "Rubik", sans-serif;  
   font-weight: 400;
-  font-family: "Rubik", sans-serif;    
+  line-height: 1.6;
 }
-
 .heading-1 {
+  color: #3e2753; 
   font-size: calc(1.8rem + 1.2vw);
   font-weight: 500;
-  color: #3e2753; }
-
+}
 .heading-4 {
+  color: #fff;
   font-size: 1.3rem;
-  color: #fff; }
+ }
 
 .paragraph {
+  color: #a39daa;
   font-size: 2rem;
-  color: #a39daa; }
-
+ }
 .small {
+  color: #d89eff;
   font-size: 1rem;
-  color: #d89eff; }
-
+ }
 .mb-md {
-  margin-bottom: 2rem; }
-
+  margin-bottom: 2rem;
+ }
 .app__container {
-  overflow: hidden;
-  position: relative;
   background-color: rgba(255, 255, 255, 0.87);
-  max-width: 144rem;
-  width: 100%;
-  z-index: 1;
-  padding: 10rem 0;
   display: grid;
-  place-items: center;
   gap: 10rem;
   grid-template-columns: repeat(6, 1fr); 
+  max-width: 144rem;
+  overflow: hidden;
+  padding: 10rem 0;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 1; 
 }
   @media screen and (max-width: 50em) {
     .app__container {
@@ -68,16 +72,16 @@ html {
      }
   @media screen and (max-width: 39em) {
     .app__container {
-      grid-template-columns: 5rem 1fr 5rem;
       gap: 0;
       grid-row-gap: 5rem;
+      grid-template-columns: 5rem 1fr 5rem;
      } 
     }
   .app__container--bg-1, .app__container--bg-2 {
-    position: absolute;
-    z-index: -1;
-    width: 32%;
     height: 85%;
+    position: absolute;
+    width: 32%;
+    z-index: -1;
    }
     @media screen and (max-width: 39em) {
       .app__container--bg-1, .app__container--bg-2 {
@@ -86,27 +90,26 @@ html {
       } 
       }
   .app__container--bg-1 {
-    top: 0;
-    left: -5%;
-    border-bottom-right-radius: 25rem;
-    border-bottom-left-radius: 25rem;
     background: linear-gradient(to left bottom, #e942ff, #8838ff); 
+    border-bottom-left-radius: 25rem;
+    border-bottom-right-radius: 25rem;
+    left: -5%;
+    top: 0;
   }
   .app__container--bg-2 {
+    background-color: rgba(216, 158, 255, 0.075);
+    border-top-left-radius: 25rem; 
+    border-top-right-radius: 25rem;
     bottom: 0;
     right: -12%;
-    background-color: rgba(216, 158, 255, 0.075);
-    border-top-right-radius: 25rem;
-    border-top-left-radius: 25rem; 
   }
-
 .app__illustration {
-  position: relative;
-  overflow: hidden;
-  grid-column: 2 / 4;
   background-color: #f5f3f7;
   border-radius: 3rem;
   box-shadow: 0 0 0 1rem #fff; 
+  grid-column: 2 / 4;
+  overflow: hidden;
+  position: relative;
 }
   @media screen and (max-width: 39em) {
     .app__illustration {
@@ -115,60 +118,60 @@ html {
    }
 
 .app__top {
-  padding: 1.5rem;
-  display: grid;
   align-items: center;
-  grid-template-columns: repeat(2, min-content) 3fr min-content;
-  gap: 1.3rem;
   background: linear-gradient(to left, #e942ff, #8838ff);
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(2, min-content) 3fr min-content;
+  padding: 1.5rem;
  }
   .app__top-notch {
     grid-column: 1 / 6; 
   }
     .app__top-notch::after {
+      background-color: #fff;
+      border-radius: 1.7rem;
       content: "";
       display: block;
-      width: 15rem;
       height: 3.5rem;
-      border-radius: 1.7rem;
-      background-color: #fff;
+      left: 50%;
       position: absolute;
       top: 0;
-      left: 50%;
       transform: translate(-50%, -50%);
+      width: 15rem;
      }
   .app__top--icon {
-    width: 1rem;
-    height: 1rem;
     fill: #fff;
+    height: 1rem;
+    width: 1rem;
    }
 .app__item {
-  width: 2.3rem;
   height: 2.3rem;
+  width: 2.3rem;
  }
 .app__img {
   box-shadow: 0 0 0 0.1rem #fff;
   border-radius: 50%;
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  width: 100%;
  }
 .app__info-person {
   line-height: 1.2; 
 }
 .app__center {
-  padding: 1.5rem 1.2rem;
   display: grid;
   grid-template-columns: repeat(5, 4.5rem);
   gap: 1rem;
+  padding: 1.5rem 1.2rem;
  }
 .app__bg {
-  font-size: 1rem;
-  border-radius: 1rem;
-  padding: 0.7rem 1rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  padding: 0.7rem 1rem;
  }
   .app__bg--1, .app__bg--2, .app__bg--5 {
     background-color: rgba(216, 158, 255, 0.226);
@@ -197,44 +200,45 @@ html {
     background: linear-gradient(to right, #e942ff, #8838ff);
     color: white;
     grid-column: 1 / 5;
-    width: 80%;
     padding: 1.2rem; 
+    width: 80%;
   }
     .app__bg--6 div, .app__bg--7 div {
-      width: 1rem;
-      height: 1rem;
       border-radius: 50%;
       box-shadow: 0 0 0 0.1rem #e570ff;
+      height: 1rem;
       margin-right: 1rem; 
+      width: 1rem;
     }
     .app__bg--6 span, .app__bg--7 span {
-      margin-left: auto;
       font-size: 1.6rem;
       font-weight: 700; 
+      margin-left: auto;
     }
   .app__bg--8 {
-    grid-column: 1 / 6;
+    align-items: center;
     background-color: white;
     border-radius: 5rem;
-    padding: 1rem 1rem 1rem 2rem;
     color: #c6cacd;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    grid-column: 1 / 6;
+    padding: 1rem 1rem 1rem 2rem;
    }
     .app__bg--8 span {
-      width: 2.5rem;
-      height: 2.5rem;
+      align-items: center; 
       border-radius: 50%;
       background-color: #3e2753;
       display: flex;
       justify-content: center;
-      align-items: center; 
+      height: 2.5rem;
+      width: 2.5rem;
+
     }
 .app__items {
-  width: 5rem;
-  height: 5rem;
   grid-row: 3 / 4;
+  height: 5rem;
+  width: 5rem;
  }
   .app__items--1 {
     grid-column: 3 / 4; 
@@ -246,10 +250,10 @@ html {
     grid-column: 5 / 6;
    }
 .app__image {
-  width: 100%;
+  border-radius: 0.7rem; 
   height: 100%;
   object-fit: cover;
-  border-radius: 0.7rem; 
+  width: 100%;
 }
 .app__description {
   grid-column: 4 / 6; 
@@ -260,9 +264,9 @@ html {
     } 
   }
 .attribution {
+  color: white; 
   font-size: 11px;
   text-align: center;
-  color: white; 
 }
 .attribution a {
   color: #e942ff;

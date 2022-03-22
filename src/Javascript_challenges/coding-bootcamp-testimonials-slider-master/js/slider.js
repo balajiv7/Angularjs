@@ -1,14 +1,20 @@
-const arrowLeft = document.getElementById("left");
-const arrowRight = document.getElementById("right");
-const firstSlide = document.getElementById("slide1");
-const secondSlide = document.getElementById("slide2");
-secondSlide.style.opacity = "0";
+const sliderButtonPrev = document.querySelector(".slider__item__prev");
+const sliderButtonNext = document.querySelector(".slider__item__next");
+const textOne = document.querySelector(".text-one");
+const textTwo = document.querySelector(".text-two");
+const photoOne = document.querySelector(".photo-one");
+const photoTwo = document.querySelector(".photo-two");
 
-arrowLeft.addEventListener('click', () =>{
-    firstSlide.style.opacity = "1";
-    secondSlide.style.opacity = "0";
-})
-arrowRight.addEventListener('click', () =>{
-    secondSlide.style.opacity = "1";
-    firstSlide.style.opacity = "0";
-})
+sliderButtonPrev.addEventListener("click", function () {
+  textOne.classList.toggle("slide-left");
+  textTwo.classList.toggle("slide-right");
+  photoOne.classList.toggle("slide-left");
+  photoTwo.classList.toggle("slide-right");
+});
+
+sliderButtonNext.addEventListener("click", function () {
+  textOne.classList.toggle("slide-left");
+  textTwo.classList.toggle("slide-right");
+  photoOne.classList.toggle("slide-left");
+  photoTwo.classList.toggle("slide-right");
+});
