@@ -571,6 +571,13 @@ ul li {
 .footer {
     background-color: hsl(168, 57%, 72%);
     padding: 4rem 0;
+    /* color:hsl(168, 57%, 72%) ; */
+   
+}
+.side {
+    color:darkcyan;
+    font-size: 25px;
+    font-weight: bold;
 }
 .footer-logo {
     margin: 0 auto;
