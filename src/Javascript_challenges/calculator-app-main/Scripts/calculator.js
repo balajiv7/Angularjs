@@ -2,7 +2,6 @@ function del(){
     var value=document.getElementById('screen').value;
     document.getElementById('screen').value=value.substr(0,value.length-1);
 }
-
 var two = document.getElementById('two');
 two.addEventListener('click',function(){
     var body=document.querySelector('body');
