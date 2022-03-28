@@ -1,3 +1,11 @@
+h1 {
+    color: red; 
+    text-align: center;
+    padding-left: 60px;
+    background-color: ivory;
+    text-transform: uppercase;
+}
+
 .content {
     padding-left: 560px;
     padding-top: 30px;
@@ -8,6 +16,7 @@
     background-size: 100% 100%;
     width: 850px;
     text-transform: uppercase;
+    background-image: url(../images/pg-back.jpeg);
 }
 
 body {
