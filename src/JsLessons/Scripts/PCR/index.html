@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="./themes/style.css">
+</head>
+<body>
+	<h1>PCR ONLINE APPLICATION</h1>
+	<form id="myform"></form>
+		<table id="form">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+                <tr>
+					<th>Aadhar Number</th>
+					<td><input type="text" name="Aadhar" id="aadhar"></td>
+				</tr>
+                <tr>
+					<th>Date of Birth</th>
+					<td><input type="text" name="Dob" id="dob"></td>
+				</tr>
+                <tr>
+					<th>City</th>
+					<td><input type="text" name="city" id="city"></td>
+				</tr>
+                <tr>
+					<th>Date Of Test</th>
+					<td><input type="text" name="dot" id="dot"></td>
+				</tr>           
+                     <tr>
+					<th>Time Of Test</th>
+					<td><input type="text" name="tot" id="tot"></td>
+				</tr>               
+                 <tr>
+					<th>LabName</th>
+					<td><input type="text" name="LabName" id="lab"></td>
+				</tr>
+                <tr>
+					<th>Report Number</th>
+					<td><input type="text" name="repno" id="rep"></td>
+				</tr>                <tr>
+					<th>Gender</th>
+					<td><input type="text" name="gender" id="gen"></td>
+				</tr>
+                <tr>
+					<th>Result</th>
+					<td><input type="text" name="result" id="res" > </td>
+				</tr>
+                
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+				
+				<tr id="btn">
+					<td colspan="2"><input type="button" name="button" id="btn" value="remove" onclick="removeSelectedRow()"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table  id="show">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Age</th>
+					<th>Aadhar Number</th>
+					<th>DOB</th>
+					<th>City</th>
+                    <th>Date Of Test</th>
+                    <th>Time Of Test</th>
+                    <th>LabName</th>
+                    <th>Report Number</th>
+                    <th>Gender</th>
+                    <th>Result</th>
+				</tr>
+			</thead>
+		</table>
+		<input type="text" id="dis" onkeyup="showAns()">search</button>
+		    <script type="text/javascript" src="./scripts/init.js"></script>
+</body>
+</html>

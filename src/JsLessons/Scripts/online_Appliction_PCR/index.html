@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Application PCR</title>
+    <link rel="stylesheet" href="./themes/style.css"/>
+</head>
+
+<body>
+    <h1>PCR APPLICATION FORM</h1>
+    <div class="container">
+        <div class="tab tab-2">
+            First Name :<input type="text" name="fname" id="fname">
+            Last Name :<input type="text" name="lname" id="lname">
+            Age :<input type="number" name="age" id="age">
+            Aadhar Number : <input type="number" name="aadhar" id="aadhar">
+            Date Of Birth : <input type="date" name="DOB" id="Dob">
+            City : <input type="text" name="city" id="city">
+            Date Of Test : <input type="date" name="DOT" id="dot">
+            Time Of Test : <input type="Time" name = "TOT" id="tot">
+            LabName : <input type="text" id="lab" name="lab" >
+            Report Number : <input type="number" id="rep" name="report">
+            Gender : <input type="text" id="gender" name="Gender">
+            Result : <input type="text" id="res" name="result" placeholder="positive/negative">
+
+            
+            <button onclick="addHtmlTableRow();">Add</button>
+            <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+            <button onclick="removeSelectedRow();">Remove</button>
+        </div>
+    
+        <div class="tab tab-1" >
+            <table id="table" >
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Aadhar</th>
+                    <th>Date of Birth</th>
+                    <th>City</th>
+                    <th>Date Of Test</th>
+                    <th>Time of Test</th>
+                    <th>LabName</th>
+                    <th>Report Number</th>
+                    <th>Gender</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>10</td>
+                    <td>1234567890</td>
+                    <td>18-04-2001</td>
+                    <td>cbe</td>
+                    <td>true</td>
+                    <td>time</td>
+                    <td>XYZ</td>
+                    <td>4561</td>
+                    <td>MALE</td>
+                    <td>Negative</td>
+
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>30</td>
+                    <td>1234567890</td>
+                    <td>22-12-2000</td>
+                    <td>vnr</td>
+                    <td>true</td>
+                    <td>time</td>
+                    <td>ABC</td>
+                    <td>321</td>
+                    <td>MALE</td>
+                    <td>positive</td>
+
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>20</td>
+                    <td>123456780</td>
+                    <td>31-06-2000</td>
+                    <td>slm</td>
+                    <td>true</td>
+                    <td>time</td>
+                    <td>BCDE</td>
+                    <td>917</td>
+                    <td>FEMALE</td>
+                    <td>positive</td>
+
+
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <table id="table2">
+        <tr id="second">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Aadhar</th>
+            <th>Date of Birth</th>
+            <th>City</th>
+            <th>Date Of Test</th>
+            <th>Time of Test</th>
+            <th>LabName</th>
+            <th>Report Number</th>
+            <th>Gender</th>
+            <th>Result</th>
+        </tr>
+        <tr id = "second">
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    <div class="search" > 
+        Search : <input type="text" id="find" onkeyup="myFunction()">
+    </div>
+    <script src="./scripts/init.js" ></script>
+</body>
+
+</html>

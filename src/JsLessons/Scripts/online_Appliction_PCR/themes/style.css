@@ -1,0 +1,30 @@
+h1 {
+    color :blue;
+padding-left: 350px;
+}
+.tab-2 input {
+    display: block;
+  }
+  
+  .tab {
+    
+    margin: 50px;
+    /* border: 1; */
+  }
+  
+  .container {
+    overflow: hidden;
+  }
+  #table{
+      margin-top: 50px;
+      border: 2px solid red;
+    padding: 2px;
+
+  }
+  td,tr,th {
+    border: 2px solid red;
+    padding: 2px;
+    padding-right: 15px;
+
+      
+  }

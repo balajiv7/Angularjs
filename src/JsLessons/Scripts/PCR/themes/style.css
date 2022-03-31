@@ -1,0 +1,25 @@
+table{
+	margin-top: 50px;
+	text-align: center;
+	background: #333;
+	color: #fff;
+    border: 4px;
+    align-items: center;
+}
+#form {
+	padding-left: 450px;
+	padding-right: 550px;
+	
+}
+h1 {
+	color: brown;
+	padding-left: 450px;
+}
+
+#show th, #show td{
+	padding: 13px;
+}
+
+#btna td input{
+	width: 100%;
+}
