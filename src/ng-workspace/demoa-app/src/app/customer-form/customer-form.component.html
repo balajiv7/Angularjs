@@ -3,9 +3,7 @@
   <div
     class="form-group"
     [class.has-error]="
-      firstNameFormControl.invalid && firstNameFormControl.touched
-    "
-  >
+      firstNameFormControl.invalid && firstNameFormControl.touched">
     <label for="fName"> First Name: </label>
     <input
       placeholder="Enter First Name"
@@ -63,8 +61,8 @@
   </div>
   <button class="btn">Submit</button>
 </form>
-
-<!-- <pre class="bg-info card" style="width: 18rem;"> 
+<!-- 
+<pre class="bg-info card" style="width: 18rem;"> 
     is pristine : {{customerFormGroup.pristine}}
     is dirty : {{customerFormGroup.dirty}}
 
@@ -83,4 +81,4 @@
 
     is untouched :{{firstNameFormControl.untouched}}
     is touched : {{firstNameFormControl.touched}} 
-</pre>-->
+</pre> -->
